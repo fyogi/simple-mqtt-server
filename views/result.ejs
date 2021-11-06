@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <%- include('./head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('./header'); %>
+    </header>
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="table table-striped custab">
+                <thead>
+                    <tr>
+                        <th>ID Reader</th>
+                        <th>Type Reader</th>
+                        <th>IP ADDRES</th>
+                        <th class="text-center">API Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (const reader of readers) { %>
+                        <tr>
+                            <td>
+                                <%= reader.reader_id %>
+                            </td>
+                            <td>
+                                <%= reader.type_reader %>
+                            </td>
+                            <td>
+                                <%= reader.ip_addr%>
+                            </td>
+                            <td>
+                                <%= reader.api_addr%>
+                            </td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p color="white" class="text-center text-muted">&copy; Copyright 2021 RFID Solution</p>
+    </footer>
+
+</body>
+
+</html>
